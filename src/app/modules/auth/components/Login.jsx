@@ -184,10 +184,10 @@ export function Login() {
         </div>
       ) : (
         <div className='mb-10 bg-light-info p-8 rounded'>
-          <div className='text-info'>
+          {/* <div className='text-info'>
             Use account <strong>admin@gmail.com</strong> and password <strong>admin@1234</strong> to
             continue.
-          </div>
+          </div> */}
         </div>
       )}
 
