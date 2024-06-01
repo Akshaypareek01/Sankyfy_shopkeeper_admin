@@ -79,6 +79,11 @@ export function Login() {
         console.log("userdata after Login====>",userData);
         // const {data: user} = await getUserByToken(auth.api_token)
         // const user=
+
+        if(userData.data.status === false){
+          window.location.href="verify"
+          return;
+        }
         
         if(userData && userData.success === true){
           setCurrentUser(userData.data);

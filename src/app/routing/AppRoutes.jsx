@@ -13,6 +13,7 @@ import {ErrorsPage} from '../modules/errors/ErrorsPage'
 import {App} from '../App'
 import { AuthPage, Logout } from '../modules/auth'
 import { ChatContextProvider } from '../../Context/ChatContext'
+import { UnderVerifications } from '../pages/ShopKeepers/UnderVerifications'
 
 /**
  * Base URL of the website.
@@ -49,8 +50,9 @@ const AppRoutes= () => {
 <BrowserRouter >
       <Routes>
         <Route element={<App />}>
-          {/* <Route path='error/*' element={<ErrorsPage />} /> */}
+          <Route path='error' element={<ErrorsPage />} />
           <Route path='logout' element={<Logout />} />
+          <Route path='verify' element={<UnderVerifications/>} />
           {currentUser ? (
             <>
               <Route path='/*' element={<PrivateRoutes />} />
@@ -59,6 +61,7 @@ const AppRoutes= () => {
           ) : (
             <> 
               <Route path='auth/*' element={<AuthPage />} />
+             
               <Route path='*' element={<Navigate to='/auth' />} />
              </>
           )}
