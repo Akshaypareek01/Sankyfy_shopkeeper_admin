@@ -28,6 +28,7 @@ import { ShopAdd } from '../pages/Shops/ShopAdd'
 import { ShopsView } from '../pages/Shops/ShopsView'
 import { AllShops } from '../pages/AllShops/AllShops'
 import { Categories } from '../pages/Categories/Categories'
+import { Chats } from '../pages/Chats/Chats'
 
 
 
@@ -164,6 +165,14 @@ const PrivateRoutes = () => {
           element={
             <SuspensedView>
               <Shops />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='chat/*'
+          element={
+            <SuspensedView>
+              <Chats />
             </SuspensedView>
           }
         />

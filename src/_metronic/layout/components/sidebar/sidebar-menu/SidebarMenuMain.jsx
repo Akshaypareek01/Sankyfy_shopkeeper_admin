@@ -12,6 +12,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import MapIcon from '@mui/icons-material/Map';
+import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 const SidebarMenuMain = () => {
   // const {userPermisson}=useContext(UserContext);
   const userPermisson = JSON.parse(sessionStorage.getItem("userPermisson"));
@@ -67,6 +68,15 @@ const SidebarMenuMain = () => {
           <MapIcon style={{ color: "orange", fontSize: "25px" }} />
         }
         title="Map"
+        fontIcon="bi-layers"
+      />
+
+<SidebarMenuItem
+        to="/chat"
+        icon={
+          <ChatBubbleIcon style={{ color: "orange", fontSize: "25px" }} />
+        }
+        title="Chats"
         fontIcon="bi-layers"
       />
 
